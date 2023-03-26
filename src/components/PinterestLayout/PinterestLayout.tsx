@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { LaunchesWithRocket } from '../../types/LaunchesType';
+import { ModalWindow } from '../ModalWindow';
 import { PintrestCard } from '../PinterestCard/PinterestCard';
 import s from './PinterestLayout.module.scss';
 
@@ -12,6 +13,8 @@ export const PinterestLayout: React.FC<Props> = ({
   launches,
 }) => {
   const [selectedId, setSelectedId] = useState<null | string>(null);
+
+  const launch = launches.find(el => el.id === selectedId);
 
   return (
     <div
@@ -27,6 +30,8 @@ export const PinterestLayout: React.FC<Props> = ({
           />
         );
       })}
+
+      {selectedId &&  <ModalWindow selectedId={selectedId} setSelectedId={setSelectedId} launch={launch || null} />}
     </div>
   );
 };

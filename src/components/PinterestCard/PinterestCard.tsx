@@ -3,8 +3,7 @@ import { generateSize } from '../../helpers/randomCardSize';
 import { randomInteger } from '../../helpers/randomNumber';
 import { LaunchesWithRocket } from '../../types/LaunchesType';
 import s from './PinterestCard.module.scss';
-import { AnimatePresence, motion } from 'framer-motion';
-import { ModalWindow } from '../ModalWindow';
+import { motion } from 'framer-motion';
 
 type Props = {
   launch: LaunchesWithRocket,
@@ -62,17 +61,6 @@ export const PintrestCard: React.FC<Props> = ({
       >
         <img src={launch.rocketObj?.flickr_images[randomNumber]} alt={launch.id} key={launch.id} className={s.cardImg}/>
       </motion.div>
-
-      {selectedId && (
-        <AnimatePresence>
-          <motion.div 
-            layoutId={selectedId} 
-            key={selectedId} 
-          >
-            <ModalWindow id={launch.id} setSelectedId={setSelectedId} />
-          </motion.div>
-        </AnimatePresence>
-      )}
     </>
   );
 };

@@ -20,7 +20,6 @@ export const getAllLaunches = (p: number, l: number) => {
         date_local: 'desc'
       },
       limit: l,
-      select: ['date_local', 'rocket'],
     }
   });
 };
@@ -75,7 +74,18 @@ export const getAllFilteredLaunches = (
         date_local: 'desc'
       },
       limit: l,
-      select: ['date_local', 'rocket'],
     }
   });
+};
+
+export const getPayloadById = (payloadId: string) => {
+  return instance.get(`payloads/${payloadId}`);
+};
+
+export const getCapsuleById = (capsuleId: string) => {
+  return instance.get(`capsules/${capsuleId}`);
+};
+
+export const getShipById = (shipId: string) => {
+  return instance.get(`ships/${shipId}`);
 };

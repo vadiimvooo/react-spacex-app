@@ -6,10 +6,10 @@ import { randomInteger } from '../../helpers/randomNumber';
 import { useWindowSize } from '../../hooks/useWindowSize';
 import { LaunchesWithRocket, LaunchesType} from '../../types/LaunchesType';
 import { RocketType } from '../../types/RocketType';
+import { AccordionComponent } from '../AccordionComponent';
 import { Filter } from '../Filter';
 import { PinterestLayout } from '../PinterestLayout/PinterestLayout';
 import s from './ListOfCards.module.scss';
-import { CSSTransition } from 'react-transition-group';
 
 export type FilterByRocket = string | null;
 
@@ -133,16 +133,32 @@ export const ListOfCards: React.FC<Props> = ({
 
   return (
     <div className={s.listofCardsContainer}>
-      <Filter 
-        rockets={rockets} 
-        setRocket={setRocket} 
-        rocket={rocket}
-        setSuccess={setSuccess}
-        setUpcoming={setUpcoming}
-        success={success}
-        upcoming={upcoming}
-        filterChange={filterChange} 
-      />
+      {windowSize.width > 1200 && (
+        <Filter 
+          rockets={rockets} 
+          setRocket={setRocket} 
+          rocket={rocket}
+          setSuccess={setSuccess}
+          setUpcoming={setUpcoming}
+          success={success}
+          upcoming={upcoming}
+          filterChange={filterChange} 
+        />
+      )}
+
+      {windowSize.width <= 1200 && (
+        <AccordionComponent
+          rockets={rockets} 
+          setRocket={setRocket} 
+          rocket={rocket}
+          setSuccess={setSuccess}
+          setUpcoming={setUpcoming}
+          success={success}
+          upcoming={upcoming}
+          filterChange={filterChange} 
+        />
+      )}
+
       <PinterestLayout launches={launches} />
     </div>
   );

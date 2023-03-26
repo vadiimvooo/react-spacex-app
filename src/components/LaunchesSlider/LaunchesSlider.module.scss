@@ -1,0 +1,113 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.productSlider {
+  display: flex !important;
+  flex-direction: column;
+
+  @include onDesktop {
+    flex-direction: row-reverse;
+    justify-content: start;
+  }
+}
+
+.productSliderPagination {
+  display: flex !important;
+  gap: 7px;
+  margin: 16px 0 0;
+  flex-direction: row;
+  justify-content: center;
+
+  @include onTablet {
+    gap: 16px;
+  }
+
+  @include onDesktop {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 16px 0 0;
+  }
+}
+
+.productSliderPaginationImageContainer {
+  width: 61px;
+  height: 50px;
+  
+  @include onDesktop {
+    width: 80px;
+    height: 66px;
+  }
+}
+
+.productSliderPaginationImage {
+  max-width: 100%;
+  height: 40px;
+  transition: all 0.3s;
+  
+  @include onDesktop {
+    height: 66px;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.product-slider__pagination li {
+  border: 1px solid $elements;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.1)
+  };
+}
+
+.productSliderImage {
+  object-fit: contain;
+  margin: auto;
+  height: 274px;
+  width: 100%;
+
+  @include onDesktop {
+    height: 442px;
+  }
+}
+
+.productSliderImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  padding: 6px;
+  
+  @include onDesktop {
+    padding: 11px;
+  }
+}
+
+li.slick-active {
+  border: 1px solid $white;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+:global(.slick-list) {
+  width: 500px;
+  height: 100% !important;
+  margin-left: 16px !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+:global(.slick-slider) {
+  height: 100%;
+}
+
+
+
+
