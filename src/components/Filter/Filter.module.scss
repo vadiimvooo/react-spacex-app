@@ -1,0 +1,13 @@
+.filterContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: fixed;
+  left: 25%;
+  top: 20px;
+  z-index: 3;
+}
+
+.filterByTitle {
+  font-size: 18px;
+}

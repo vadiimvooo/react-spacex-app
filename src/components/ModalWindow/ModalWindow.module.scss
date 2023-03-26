@@ -1,0 +1,19 @@
+.modalWindowBackground {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  top: 0;
+  left: 0;
+}
+
+.modalWindowBlock {
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 50px;
+}

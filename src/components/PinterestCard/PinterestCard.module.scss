@@ -1,0 +1,29 @@
+.card {
+  margin: 15px 10px;
+  padding: 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.small {
+  grid-row-end: span 26;
+}
+
+.medium {
+  grid-row-end: span 33;
+}
+
+.large {
+  grid-row-end: span 45;
+}
+
+.cardImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+ 
+  &:hover {
+    transform: scale(1.2);
+  }
+}

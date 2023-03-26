@@ -1,0 +1,20 @@
+@import '../../styles/container.scss';
+
+.header {
+  height: 80px;
+  position: sticky;
+  top: 0px;
+  padding: 0 50px;
+  border-bottom: 1px solid rgb(180, 178, 178);
+  background-color: rgba($color: #fff, $alpha: 1);
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  gap: 300px
+}
+
+.logo {
+  height: 50px;
+  transform: scale(1.5);
+}
