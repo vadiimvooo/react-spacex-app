@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
       className={s.header}
     >
       <div className={s.headerLogo}>
-        <a href="http://localhost:3000/">
+        <a href="https://vadiimvooo.github.io/react-spacex-app/">
           <img src={logo} alt="SpaceX" className={s.logo}/>
         </a>
       </div>
