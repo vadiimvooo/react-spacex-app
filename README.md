@@ -20,7 +20,7 @@
 <p align="center">
   <img width="750" src="./src/photos/spaceX.png" /> <br>
   <a href="https://vadiimvooo.github.io/react-spacex-app/" target="_blank">
-    <img alt="Demo on GH Pages" width="200" src="./photos/gh-pages-link.png">
+    <img alt="Demo on GH Pages" width="200" src="./src/photos/gh-pages-link.png">
   </a>
 </p>
 
